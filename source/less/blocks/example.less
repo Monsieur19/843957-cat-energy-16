@@ -5,7 +5,7 @@
   background: @grey-color;
 }
 
-.example__description  {
+.example__description {
   margin-bottom: 35px;
 }
 
@@ -23,7 +23,7 @@
 
   font-size: 14px;
   line-height: 18px;
-  font-family: "Arial";
+  font-family: "Arial", sans-serif;
 }
 
 .example__info {
@@ -50,17 +50,17 @@
 }
 
 .example__weight span,
-.example__amount-days  span {
+.example__amount-days span {
   position: absolute;
   left: 50%;
-  bottom:0;
+  bottom: 0;
 
   padding: 0 15px;
 
   font-size: 12px;
   line-height: 12px;
   color: @text-color;
-  font-family: "Arial";
+  font-family: "Arial", sans-serif;
 
   background: @grey-color;
 
@@ -78,11 +78,11 @@
   white-space: pre-wrap;
 }
 
-.example__photos  {
+.example__photos {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items:center;
+  align-items: center;
 }
 
 .example__photos input {
@@ -128,6 +128,6 @@
   text-transform: uppercase;
 }
 
-#become-input:checked ~ .was-become__toggle::after {
+input[name="was-become"]:checked ~ .was-become__toggle::after {
   left: 44px;
 }

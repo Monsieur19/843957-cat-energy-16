@@ -33,6 +33,7 @@
     background: @main-color;
     border-radius: 50%;
   }
+
   &::after {
     content: "";
     position: absolute;
@@ -67,7 +68,7 @@
   font-size: 14px;
   line-height: 18px;
   color: @text-color;
-  font-family: "Arial";
+  font-family: "Arial", sans-serif;
 
   border-bottom: 1px solid @border-color;
 }
@@ -83,7 +84,7 @@
 
   &::after {
     .after("../../img/icon-right-arrow-long.svg"; 24px; 11px;);
-    top: 50%;
+    top: 13px;
     right: -36px;
     transform: translateY(-50%;);
   }
