@@ -1,0 +1,43 @@
+@import "variable.less";
+body {
+  margin:0;
+  padding: 0;
+}
+* {
+  color: @main-text-color;
+  font-family: 'Oswald';
+  font-weight: 400;
+}
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+
+  max-width: 280px;
+}
+.header {
+  font-size: 36px;
+  line-height: 36px;
+}
+.button {
+  width: 100%;
+  padding: 12px 0;
+
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+
+  background: @main-color;
+}
+@import "fonts.less";
+@import "blocks/head.less";
+@import "blocks/programm.less";
+@import "blocks/info.less";
+@import "blocks/howWork.less";
+@import "blocks/example.less";
+@import "blocks/address.less";
+@import "blocks/foot.less";
+@import "blocks/catalog.less";
+@import "blocks/extraProduct.less";
