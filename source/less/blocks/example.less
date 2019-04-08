@@ -1,0 +1,133 @@
+.example {
+  padding-top: 30px;
+  padding-bottom: 35px;
+
+  background: @grey-color;
+}
+
+.example__description {
+  margin-bottom: 35px;
+}
+
+.example__title {
+  .zero;
+  margin-bottom: 30px;
+
+  .setFont(36px; 60px;);
+}
+
+.example__story {
+  .zero;
+  padding-right: 10px;
+  margin-bottom: 25px;
+
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Arial", sans-serif;
+}
+
+.example__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 35px;
+}
+
+.example__weight,
+.example__amount-days {
+  position: relative;
+
+  .zero;
+  width: 122px;
+  height: 54px;
+
+  font-size: 24px;
+  line-height: 50px;
+  text-align: center;
+
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+}
+
+.example__weight span,
+.example__amount-days span {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+
+  padding: 0 15px;
+
+  font-size: 12px;
+  line-height: 12px;
+  color: @text-color;
+  font-family: "Arial", sans-serif;
+
+  background: @grey-color;
+
+  transform: translate(-50%, 50%);
+}
+
+.example__price {
+  display: flex;
+  justify-content: center;
+  .zero;
+
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  white-space: pre-wrap;
+}
+
+.slider {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider input {
+  display: none;
+}
+
+.slider__img {
+  margin-bottom: 35px;
+}
+
+.slider__img--right-cat {
+  display: none;
+}
+
+.slider__was-become-toggle {
+  position: relative;
+
+  width: 83px;
+  height: 12px;
+  margin-left: 18px;
+  margin-right: 18px;
+
+  background: #ffffff;
+  border: 1px solid #cdcdcd;
+  border-radius: 6px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    width: 35px;
+    height: 6px;
+    background: @main-color;
+    border-radius: 3px;
+  }
+}
+
+.slider__was,
+.slider__become {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.slider__become-input:checked ~ .slider__was-become-toggle::after {
+  left: 44px;
+}
