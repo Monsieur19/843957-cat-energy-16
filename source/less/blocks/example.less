@@ -13,7 +13,7 @@
   .zero;
   margin-bottom: 30px;
 
-  line-height: 60px;
+  .setFont(36px; 60px;);
 }
 
 .example__story {
@@ -78,26 +78,26 @@
   white-space: pre-wrap;
 }
 
-.example__photos {
+.slider {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
 
-.example__photos input {
+.slider input {
   display: none;
 }
 
-.example__img {
+.slider__img {
   margin-bottom: 35px;
 }
 
-.example__img--right-cat {
+.slider__img--right-cat {
   display: none;
 }
 
-.was-become__toggle {
+.slider__was-become-toggle {
   position: relative;
 
   width: 83px;
@@ -121,13 +121,13 @@
   }
 }
 
-.was,
-.become {
+.slider__was,
+.slider__become {
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
 }
 
-input[name="was-become"]:checked ~ .was-become__toggle::after {
+.slider__become-input:checked ~ .slider__was-become-toggle::after {
   left: 44px;
 }
