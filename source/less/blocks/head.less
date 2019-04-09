@@ -6,6 +6,14 @@
   padding: 10px 0;
 }
 
+.head__logo-img-tablet {
+  display: none;
+}
+
+.head__logo-img-desktop {
+  display: none;
+}
+
 .main-nav {
   display: none;
   width: 100%;
@@ -53,6 +61,71 @@
   text-decoration: none;
   text-align: center;
 
-  background: #ffffff;
   border-bottom: 1px solid #e6e6e6;
+}
+
+.current-page {
+  border-bottom: 2px solid @main-color;
+}
+
+@media (min-width: 768px) {
+  .head__logo-img-mobile {
+    display: none;
+  }
+
+  .head__logo-img-tablet {
+    display: block;
+  }
+
+  .head__btn-open-menu {
+    display: none;
+  }
+
+  .main-nav {
+    display: block;
+    width: 440px;
+  }
+
+  .main-nav__list {
+    flex-direction: row;
+    justify-content: space-between;
+
+    border: none;
+  }
+
+  .main-nav__item {
+    width: auto;
+  }
+
+  .main-nav__item a {
+    display: block;
+    width: auto;
+    padding: 8px 0;
+
+    .setFont(18px; 24px; "Oswald";);
+
+    border: none;
+  }
+
+  .main-nav__item .current-page {
+    border-bottom: 2px solid @main-color;
+  }
+}
+
+@media (min-width: 1300px) {
+  .head__logo-img-tablet {
+    display: none;
+  }
+
+  .head__logo-img-desktop {
+    display: block;
+  }
+
+  .main-nav__item a {
+    color: #ffffff;
+  }
+
+  .main-nav__item .current-page {
+    border-color: #ffffff;
+  }
 }
