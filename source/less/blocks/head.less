@@ -1,3 +1,7 @@
+.head {
+  border-bottom: 1px solid @border-color;
+}
+
 .head__wrapper {
   display: flex;
   justify-content: space-between;
@@ -69,6 +73,10 @@
 }
 
 @media (min-width: 768px) {
+  .head {
+    border: none;
+  }
+
   .head__logo-img-mobile {
     display: none;
   }
