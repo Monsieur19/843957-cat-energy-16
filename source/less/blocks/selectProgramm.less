@@ -13,16 +13,19 @@
   .setFont(14px; 18px;);
 }
 
-.form__main-info {
-  display: flex;
-  flex-direction: column;
+.form__field {
   .zero;
-  margin-bottom: 9px;
 
   border: none;
 }
 
-.form__main-info label {
+.form__field--main-info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 9px;
+}
+
+.form__field--main-info label {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,7 +35,7 @@
   text-transform: uppercase;
 }
 
-.form__main-info input {
+.form__field--main-info input {
   padding: 15px;
 
   .setFont(16px; 18px; "Oswald"; @text-color);
@@ -53,21 +56,29 @@
   width: 172px;
 }
 
-.form__purpose {
-  margin-bottom: 30px;
+.form__field--purpose {
+  position: relative;
 
-  border: none;
-  border-top: 1px solid @border-color;
-  border-bottom: 1px solid @border-color;
-}
-
-.form__purpose-wrapper {
   display: flex;
   flex-direction: column;
   padding: 20px 0;
+  margin-bottom: 30px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100vw;
+
+    width: 200vw;
+    height: 100%;
+
+    border-top: 1px solid @border-color;
+    border-bottom: 1px solid @border-color;
+  }
 }
 
-.form__purpose-wrapper input {
+.form__field--purpose input {
   display: none;
 }
 
@@ -83,7 +94,7 @@
   display: block;
 }
 
-.form__purpose-wrapper label {
+.form__field--purpose label {
   position: relative;
 
   padding-left: 46px;
@@ -128,14 +139,11 @@
   }
 }
 
-.form__contact-data {
-  .zero;
+.form__field--contact-data {
   margin-bottom: 10px;
-
-  border: none;
 }
 
-.form__contact-data legend {
+.form__field--contact-data legend {
   position: relative;
 
   width: 200px;
@@ -157,7 +165,7 @@
   }
 }
 
-.form__contact-data label {
+.form__contact-data-container label {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -167,7 +175,7 @@
   text-transform: uppercase;
 }
 
-.form__contact-data input {
+.form__contact-data-container input {
   padding: 15px;
   padding-right: 35px;
 
@@ -193,14 +201,11 @@
   background-size: 10%;
 }
 
-.form__comment {
-  .zero;
+.form__field--comment {
   margin-bottom: 15px;
-
-  border: none;
 }
 
-.form__comment legend {
+.form__field--comment legend {
   position: relative;
 
   .zero;
@@ -222,26 +227,23 @@
 }
 
 .form__textarea {
-  width: 280px;
+  width: 100%;
   min-height: 150px;
   padding: 13px;
 
   .setFont(16px; 18px; "Oswald"; @text-color;);
 }
 
-.form__extra {
+.form-extra-container {
   display: flex;
   flex-direction: column;
-  .zero;
-
-  border: none;
 }
 
-.form__extra input {
+.form__extra-container input {
   display: none;
 }
 
-.form__extra legend {
+.form__field--extra legend {
   position: relative;
   .zero;
   margin-bottom: 30px;
@@ -261,9 +263,10 @@
   }
 }
 
-.form__extra label {
+.form__extra-container label {
   position: relative;
 
+  display: block;
   padding-left: 46px;
   margin-bottom: 25px;
 
@@ -312,4 +315,291 @@
 .primary-field {
   .zero;
   padding: 24px 61px 30px 61px;
+}
+
+@media (min-width: 768px) {
+  .select-programm__form {
+    padding: 0 37px 0 40px;
+  }
+
+  .select-programm__title {
+    margin-bottom: 30px;
+
+    .setFont(60px; 60px;);
+  }
+
+  .select-programm__profile {
+    width: 365px;
+    padding-left: 40px;
+    margin-bottom: 65px;
+
+    .setFont(20px; 30px;);
+    text-transform: uppercase;
+  }
+
+  .form__field--main-info label {
+    .setFont(20px; 20px;);
+  }
+
+  .form__name input {
+    width: 567px;
+  }
+
+  .form__weight input {
+    width: 536px;
+  }
+
+  .form__age input {
+    width: 497px;
+  }
+
+  .form__field--purpose {
+    width: 630px;
+    padding: 30px 27px;
+
+    border: 1px solid @border-color;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .form__field--purpose label {
+    padding-left: 60px;
+    margin-bottom: 30px;
+
+    .setFont(20px; 20px;);
+
+    &::before {
+      width: 40px;
+      height: 40px;
+    }
+
+    &::after {
+      left: 12px;
+
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .form__field--contact-data {
+    margin-bottom: 30px;
+  }
+
+  .form__field--contact-data legend {
+    width: 520px;
+    margin-bottom: 65px;
+
+    .setFont(36px; 36px;);
+
+    &::after {
+      top: 20px;
+      left: 105%;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 20px;
+      left: -540px;
+
+      width: 500px;
+      height: 3px;
+
+      background: @main-color;
+    }
+  }
+
+  .form__contact-data-container label {
+    .setFont(20px; 20px;);
+  }
+
+  .form__email input {
+    width: 551px;
+
+    background-size: 4%;
+  }
+
+  .form__phone input {
+    width: 535px;
+
+    background-size: 4%;
+  }
+
+  .form__field--comment {
+    margin-bottom: 30px;
+  }
+
+  .form__field--comment legend {
+    margin-bottom: 65px;
+
+    .setFont(36px;36px;);
+
+    &::after {
+      top: 20px;
+      width: 1000px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 20px;
+      left: -540px;
+
+      width: 500px;
+      height: 3px;
+
+      background: @main-color;
+    }
+  }
+
+  .form__textarea {
+    min-height: 174px;
+  }
+
+  .form__extra-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .form__field--extra legend {
+    margin-bottom: 65px;
+
+    .setFont(36px; 36px;);
+
+    &::after {
+      top: 20px;
+      width: 1000px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 20px;
+      left: -540px;
+
+      width: 500px;
+      height: 3px;
+
+      background: @main-color;
+    }
+  }
+
+  .form__extra-container label {
+    width: 283px;
+    margin-bottom: 45px;
+
+    .setFont(20px; 20px;);
+  }
+
+  .form__btn-send-request {
+    width: 283px;
+  }
+
+  .primary-field {
+    .zero;
+    padding-left: 60px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+  }
+
+  .form__container-send-request {
+    display: flex;
+    align-items: center;
+    margin-bottom: 70px;
+  }
+
+  .form__sweetener:checked ~ .form__field--extra-sweetener::after {
+    background: url("../img/icon-tick.svg") no-repeat  center center;
+    background-size: 60%;
+  }
+
+  .form__water:checked ~ .form__field--extra-water::after {
+    background: url("../img/icon-tick.svg") no-repeat  center center;
+    background-size: 60%;
+  }
+
+  .form__milk:checked ~ .form__field--extra-milk::after {
+    background: url("../img/icon-tick.svg") no-repeat  center center;
+    background-size: 60%;
+  }
+
+  .form__vitamins:checked ~ .form__field--extra-vitamins::after {
+    background: url("../img/icon-tick.svg") no-repeat  center center;
+    background-size: 60%;
+  }
+}
+
+@media (min-width: 1300px) {
+  .select-programm__profile {
+    padding-left: 0;
+  }
+
+  .select-programm__form {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .form__field--main-info {
+    width: 570px;
+  }
+
+  .form__field--purpose {
+    width: 570px;
+  }
+
+  .form__name input {
+    width: 507px;
+  }
+
+  .form__weight input {
+    width: 475px;
+  }
+
+  .form__age input {
+    width: 436px;
+  }
+
+  .form__field--contact-data {
+    width: 100%;
+  }
+
+  .form__contact-data-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form__email input {
+    width: 486px;
+    margin-left: 20px;
+  }
+
+  .form__phone input {
+    width: 472px;
+    margin-left: 20px;
+  }
+
+  .form__field--comment {
+    width: 100%;
+  }
+
+  .form__extra-container {
+    flex-wrap: nowrap;
+  }
+
+  .form__extra-container label {
+    width: 325px;
+    margin-bottom: 65px;
+  }
+
+  .form__btn-send-request {
+    width: 570px;
+  }
 }
