@@ -1,6 +1,6 @@
 .select-programm__title {
   .zero;
-  padding: 20px 0;
+  padding: 17px 0 24px 0;
 
   .setFont(36px; 60px;);
 }
@@ -8,40 +8,68 @@
 .select-programm__profile {
   width: 230px;
   .zero;
-  margin-bottom: 35px;
+  margin-bottom: 38px;
 
   .setFont(14px; 18px;);
+  text-transform: uppercase;
 }
 
 .form__field {
+  display: flex;
   .zero;
 
   border: none;
 }
 
-.form__field--main-info {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 9px;
+.form legend {
+  position: relative;
+
+  .zero;
+
+  .setFont(24px; 24px;);
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 100%;
+
+    width: 100vw;
+    height: 3px;
+
+    background: @main-color;
+  }
 }
 
-.form__field--main-info label {
+.form label {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 14px;
 
   .setFont(16px; 18px; "Oswald"; #222222);
   text-transform: uppercase;
 }
 
-.form__field--main-info input {
-  padding: 15px;
+.form input {
+  padding: 13px 0 14px 15px;
 
   .setFont(16px; 18px; "Oswald"; @text-color);
   text-transform: uppercase;
 
   border: 1px solid @border-color;
+}
+
+.form__field--main-info {
+  flex-direction: column;
+  margin-bottom: 22px;
+}
+
+.form__field--main-info label {
+  margin-bottom: 12px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .form__name input {
@@ -59,9 +87,8 @@
 .form__field--purpose {
   position: relative;
 
-  display: flex;
   flex-direction: column;
-  padding: 20px 0;
+  padding: 27px 0 25px 0;
   margin-bottom: 30px;
 
   &::after {
@@ -73,8 +100,7 @@
     width: 200vw;
     height: 100%;
 
-    border-top: 1px solid @border-color;
-    border-bottom: 1px solid @border-color;
+    border: 1px solid @border-color;
   }
 }
 
@@ -99,9 +125,6 @@
 
   padding-left: 46px;
   margin-bottom: 25px;
-
-  .setFont(16px; 18px; "Oswald"; #222222;);
-  text-transform: uppercase;
 
   &:last-child {
     margin-bottom: 0;
@@ -140,47 +163,23 @@
 }
 
 .form__field--contact-data {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .form__field--contact-data legend {
-  position: relative;
-
   width: 200px;
-  .zero;
-  margin-bottom: 20px;
-
-  .setFont(24px; 24px;);
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 14px;
-    left: 100%;
-
-    width: 500px;
-    height: 3px;
-
-    background: @main-color;
-  }
+  margin-bottom: 33px;
 }
 
 .form__contact-data-container label {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
-
-  .setFont(16px; 16px; "Oswald"; #222222;);
-  text-transform: uppercase;
+  margin-bottom: 12px;
 }
 
 .form__contact-data-container input {
-  padding: 15px;
   padding-right: 35px;
-
-  .setFont(16px; 16px; "Oswald"; #222222;);
-  text-transform: uppercase;
 }
 
 .form__email input {
@@ -188,48 +187,30 @@
 
   border: 1px solid @border-color;
 
-  background: url("../img/icon-mail.svg") no-repeat 95% center;
-  background-size: 10%;
+  background: url("../img/icon-mail.svg") no-repeat 93% center;
+  background-size: 8%;
 }
 
 .form__phone input {
   width: 204px;
 
-  border: 1px solid @border-color;
-
-  background: url("../img/icon-phone.svg") no-repeat 95% center;
+  background: url("../img/icon-phone.svg") no-repeat 94% center;
   background-size: 10%;
 }
 
 .form__field--comment {
-  margin-bottom: 15px;
+  margin-bottom: 28px;
 }
 
 .form__field--comment legend {
-  position: relative;
-
-  .zero;
-  margin-bottom: 30px;
-
-  .setFont(24px; 24px;);
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 14px;
-    left: 120%;
-
-    width: 500px;
-    height: 3px;
-
-    background: @main-color;
-  }
+  width: 142px;
+  margin-bottom: 36px;
 }
 
 .form__textarea {
   width: 100%;
   min-height: 150px;
-  padding: 13px;
+  padding: 11px 13px 11px 14px;
 
   .setFont(16px; 18px; "Oswald"; @text-color;);
 }
@@ -243,24 +224,13 @@
   display: none;
 }
 
+.form__field--extra {
+  margin-bottom: 15px;
+}
+
 .form__field--extra legend {
-  position: relative;
-  .zero;
-  margin-bottom: 30px;
-
-  .setFont(24px; 24px;);
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 14px;
-    left: 120%;
-
-    width: 500px;
-    height: 3px;
-
-    background: @main-color;
-  }
+  width: 164px;
+  margin-bottom: 39px;
 }
 
 .form__extra-container label {
@@ -270,17 +240,14 @@
   padding-left: 46px;
   margin-bottom: 25px;
 
-  .setFont(16px; 18px; "Oswald"; #222222;);
-  text-transform: uppercase;
-
   &::after {
     content: "";
     position: absolute;
-    top: -7px;
+    top: -5px;
     left: 0;
 
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
 
     border: 1px solid  @border-color;
   }
@@ -307,6 +274,7 @@
 }
 
 .form__btn-send-request {
+  padding: 9px 0 10px 0;
   .setFont(16px; 20px; "Oswald"; #ffffff;);
 
   border: none;
@@ -314,15 +282,18 @@
 
 .primary-field {
   .zero;
-  padding: 24px 61px 30px 61px;
+  padding: 22px 55px 31px 63px;
+
+  .setFont(14px; 16px; "Arial"; @text-color;);
 }
 
 @media (min-width: 768px) {
-  .select-programm__form {
+  .form {
     padding: 0 37px 0 40px;
   }
 
   .select-programm__title {
+    padding-top: 42px;
     margin-bottom: 30px;
 
     .setFont(60px; 60px;);
@@ -331,14 +302,48 @@
   .select-programm__profile {
     width: 365px;
     padding-left: 40px;
-    margin-bottom: 65px;
+    margin-bottom: 67px;
 
     .setFont(20px; 30px;);
     text-transform: uppercase;
   }
 
-  .form__field--main-info label {
+  .form legend {
+    .setFont(36px; 36px;);
+
+    &::after {
+      top: 22px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 22px;
+      left: -104vw;
+
+      width: 100vw;
+      height: 3px;
+
+      background: @main-color;
+    }
+  }
+
+  .form label {
     .setFont(20px; 20px;);
+  }
+
+  .form input {
+    padding: 10px 19px;
+
+    .setFont(20px; 20px; "Oswald"; @text-color;);
+  }
+
+  .form__field--main-info {
+    margin-bottom: 74px;
+  }
+
+  .form__field--main-info label {
+    margin-bottom: 20px;
   }
 
   .form__name input {
@@ -355,7 +360,8 @@
 
   .form__field--purpose {
     width: 630px;
-    padding: 30px 27px;
+    padding: 33px 27px;
+    margin-bottom: 76px;
 
     border: 1px solid @border-color;
 
@@ -366,9 +372,7 @@
 
   .form__field--purpose label {
     padding-left: 60px;
-    margin-bottom: 30px;
-
-    .setFont(20px; 20px;);
+    margin-bottom: 33px;
 
     &::before {
       width: 40px;
@@ -384,78 +388,50 @@
   }
 
   .form__field--contact-data {
-    margin-bottom: 30px;
+    margin-bottom: 45px;
   }
 
   .form__field--contact-data legend {
-    width: 520px;
-    margin-bottom: 65px;
-
-    .setFont(36px; 36px;);
-
-    &::after {
-      top: 20px;
-      left: 105%;
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 20px;
-      left: -540px;
-
-      width: 500px;
-      height: 3px;
-
-      background: @main-color;
-    }
+    width: 552px;
+    margin-bottom: 75px;
   }
 
-  .form__contact-data-container label {
-    .setFont(20px; 20px;);
+  .form__field--contact-data label {
+    margin-bottom: 20px;
   }
 
   .form__email input {
     width: 551px;
+    padding-left: 23px;
 
     background-size: 4%;
   }
 
   .form__phone input {
     width: 535px;
+    padding-left: 20px;
 
     background-size: 4%;
   }
 
   .form__field--comment {
-    margin-bottom: 30px;
+    margin-bottom: 66px;
   }
 
   .form__field--comment legend {
-    margin-bottom: 65px;
-
-    .setFont(36px;36px;);
-
-    &::after {
-      top: 20px;
-      width: 1000px;
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 20px;
-      left: -540px;
-
-      width: 500px;
-      height: 3px;
-
-      background: @main-color;
-    }
+    width: 218px;
+    margin-bottom: 75px;
   }
 
   .form__textarea {
     min-height: 174px;
+    padding: 10px 18px;
+
+    .setFont(size; 20px; 30px;);
+  }
+
+  .form__field--extra {
+    margin-bottom: 11px;
   }
 
   .form__extra-container {
@@ -467,44 +443,41 @@
   }
 
   .form__field--extra legend {
-    margin-bottom: 65px;
-
-    .setFont(36px; 36px;);
-
-    &::after {
-      top: 20px;
-      width: 1000px;
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 20px;
-      left: -540px;
-
-      width: 500px;
-      height: 3px;
-
-      background: @main-color;
-    }
+    width: 253px;
+    margin-bottom: 67px;
   }
 
   .form__extra-container label {
-    width: 283px;
-    margin-bottom: 45px;
+    width: 287px;
+    padding-left: 59px;
+    margin-bottom: 52px;
 
-    .setFont(20px; 20px;);
+    &::after {
+      top: -10px;
+
+      width: 38px;
+      height: 38px;
+    }
   }
 
-  .form__btn-send-request {
-    width: 283px;
+  .form__sweetener:checked ~ .form__extra-sweetener::after {
+    background: url("../img/icon-tick.svg") no-repeat center center;
+    background-size: 60%;
   }
 
-  .primary-field {
-    .zero;
-    padding-left: 60px;
-    padding-top: 10px;
-    padding-bottom: 15px;
+  .form__water:checked ~ .form__extra-water::after {
+    background: url("../img/icon-tick.svg") no-repeat center center;
+    background-size: 60%;
+  }
+
+  .form__milk:checked ~ .form__extra-milk::after {
+    background: url("../img/icon-tick.svg") no-repeat center center;
+    background-size: 60%;
+  }
+
+  .form__vitamins:checked ~ .form__extra-vitamins::after {
+    background: url("../img/icon-tick.svg") no-repeat center center;
+    background-size: 60%;
   }
 
   .form__container-send-request {
@@ -513,33 +486,39 @@
     margin-bottom: 70px;
   }
 
-  .form__sweetener:checked ~ .form__field--extra-sweetener::after {
-    background: url("../img/icon-tick.svg") no-repeat  center center;
-    background-size: 60%;
+  .form__btn-send-request {
+    width: 283px;
+    padding: 17px;
+
+    .setFont(20px; 20px; "Oswald"; #ffffff;);
   }
 
-  .form__water:checked ~ .form__field--extra-water::after {
-    background: url("../img/icon-tick.svg") no-repeat  center center;
-    background-size: 60%;
-  }
+  .primary-field {
+    .zero;
+    padding-left: 62px;
+    padding-top: 11px;
+    padding-bottom: 15px;
 
-  .form__milk:checked ~ .form__field--extra-milk::after {
-    background: url("../img/icon-tick.svg") no-repeat  center center;
-    background-size: 60%;
-  }
-
-  .form__vitamins:checked ~ .form__field--extra-vitamins::after {
-    background: url("../img/icon-tick.svg") no-repeat  center center;
-    background-size: 60%;
+    .setFont(16px; 16px; "Arial"; @text-color;);
   }
 }
 
 @media (min-width: 1300px) {
-  .select-programm__profile {
-    padding-left: 0;
+  .select-programm {
+    margin-bottom: 15px;
   }
 
-  .select-programm__form {
+  .select-programm__title {
+    padding-top: 58px;
+    margin-bottom: 31px;
+  }
+
+  .select-programm__profile {
+    padding-left: 0;
+    margin-bottom: 66px;
+  }
+
+  .form {
     padding: 0;
     display: flex;
     justify-content: space-between;
@@ -547,12 +526,25 @@
     width: 100%;
   }
 
+  .form__field legend {
+    &::before {
+      left: -102.4vw;
+    }
+  }
+
+  .form__field {
+    width: 100%;
+  }
+
   .form__field--main-info {
     width: 570px;
+    margin-bottom: 0;
   }
 
   .form__field--purpose {
     width: 570px;
+    padding-bottom: 36px;
+    margin-bottom: 68px;
   }
 
   .form__name input {
@@ -568,7 +560,7 @@
   }
 
   .form__field--contact-data {
-    width: 100%;
+    margin-bottom: 48px;
   }
 
   .form__contact-data-container {
@@ -577,17 +569,19 @@
   }
 
   .form__email input {
-    width: 486px;
+    width: 488px;
+    padding-left: 21px;
     margin-left: 20px;
   }
 
   .form__phone input {
     width: 472px;
+    padding-left: 18px;
     margin-left: 20px;
   }
 
   .form__field--comment {
-    width: 100%;
+    margin-bottom: 68px;
   }
 
   .form__extra-container {
@@ -596,10 +590,15 @@
 
   .form__extra-container label {
     width: 325px;
-    margin-bottom: 65px;
+    margin-bottom: 60px;
   }
 
   .form__btn-send-request {
     width: 570px;
+    padding-top: 15px;
+  }
+
+  .primary-field {
+    padding-left: 81px;
   }
 }
