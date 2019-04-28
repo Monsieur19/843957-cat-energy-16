@@ -3,6 +3,8 @@
   padding-bottom: 35px;
 
   background: @grey-color;
+
+  overflow: hidden;
 }
 
 .example__description {
@@ -78,60 +80,6 @@
   line-height: 20px;
   text-transform: uppercase;
   white-space: pre-wrap;
-}
-
-.slider {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.slider input {
-  display: none;
-}
-
-.slider__img {
-  margin-bottom: 32px;
-}
-
-.slider__container-right-cat {
-  display: none;
-}
-
-.slider__was-become-toggle {
-  position: relative;
-
-  width: 83px;
-  height: 14px;
-  margin-left: 18px;
-  margin-right: 18px;
-
-  background: #ffffff;
-  border: 1px solid #cdcdcd;
-  border-radius: 5px;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 3px;
-    left: 4px;
-    width: 35px;
-    height: 6px;
-    background: @main-color;
-    border-radius: 3px;
-  }
-}
-
-.slider__was,
-.slider__become {
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-}
-
-.slider__become-input:checked ~ .slider__was-become-toggle::after {
-  left: 44px;
 }
 
 @media (min-width: 768px) {
@@ -214,69 +162,6 @@
       margin-bottom: 10px;
     }
   }
-
-  .slider {
-    position: relative;
-
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: -60px;
-      left: 50%;
-
-      width: 100%;
-      height: 462px;
-
-      background: #eaeaea;
-    }
-  }
-
-  .slider__img {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 520px;
-
-    z-index: 2;
-  }
-
-  .slider__img img {
-    width: 690px;
-    height: 517px;
-  }
-
-  .slider__container-right-cat {
-    display: block;
-  }
-
-  .slider__container-left-cat,
-  .slider__container-right-cat {
-    position: relative;
-
-    width: 50%;
-
-    overflow: hidden;
-  }
-
-  .slider__img--left-cat {
-    position: absolute;
-    top: 0;
-    left: 16px;
-  }
-
-  .slider__img--right-cat {
-    position: absolute;
-    top: 0;
-    left: -338px;
-  }
-
-  .slider__was-become-toggle {
-    z-index: 2;
-  }
-
-  .slider__become {
-    z-index: 2;
-  }
 }
 
 @media (min-width: 1300px) {
@@ -325,38 +210,5 @@
     & span:first-child {
       margin: 0;
     }
-  }
-
-  .slider {
-    align-items: flex-start;
-
-    &::after {
-      bottom: -60px;
-    }
-  }
-
-  .slider__img {
-    height: 520px;
-    margin-bottom: 0;
-  }
-
-  .slider__container-left-cat {
-    width: 325px;
-    height: 520px;
-  }
-
-  .slider__container-right-cat {
-    width: 285px;
-    height: 520px;
-  }
-
-  .slider__img--left-cat {
-    top: 17px;
-    left: -40px;
-  }
-
-  .slider__img--right-cat {
-    top: 17px;
-    left: -365px;
   }
 }
