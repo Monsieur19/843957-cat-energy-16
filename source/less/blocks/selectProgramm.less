@@ -1,3 +1,7 @@
+.select-programm {
+  overflow: hidden;
+}
+
 .select-programm__title {
   .zero;
   padding: 17px 0 24px 0;
@@ -21,7 +25,7 @@
   border: none;
 }
 
-.form legend {
+.form__legend {
   position: relative;
 
   .zero;
@@ -41,7 +45,7 @@
   }
 }
 
-.form label {
+.form__label {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -50,7 +54,7 @@
   text-transform: uppercase;
 }
 
-.form input {
+.form__input {
   padding: 13px 0 14px 15px;
 
   .setFont(16px; 18px; "Oswald"; @text-color);
@@ -101,6 +105,8 @@
     height: 100%;
 
     border: 1px solid @border-color;
+
+    z-index: -1;
   }
 }
 
@@ -128,6 +134,10 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 
   &::before {
@@ -172,9 +182,6 @@
 }
 
 .form__contact-data-container label {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin-bottom: 12px;
 }
 
@@ -213,6 +220,8 @@
   padding: 11px 13px 11px 14px;
 
   .setFont(16px; 18px; "Oswald"; @text-color;);
+
+  resize: none;
 }
 
 .form-extra-container {
@@ -239,6 +248,10 @@
   display: block;
   padding-left: 46px;
   margin-bottom: 25px;
+
+  &:active {
+    opacity: 0.3;
+  }
 
   &::after {
     content: "";
@@ -308,7 +321,7 @@
     text-transform: uppercase;
   }
 
-  .form legend {
+  .form__legend {
     .setFont(36px; 36px;);
 
     &::after {
@@ -328,11 +341,11 @@
     }
   }
 
-  .form label {
+  .form__label {
     .setFont(20px; 20px;);
   }
 
-  .form input {
+  .form__input {
     padding: 10px 19px;
 
     .setFont(20px; 20px; "Oswald"; @text-color;);
