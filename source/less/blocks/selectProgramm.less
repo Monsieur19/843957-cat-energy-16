@@ -55,12 +55,29 @@
 }
 
 .form__input {
+  outline-color: transparent;
   padding: 13px 0 14px 15px;
 
   .setFont(16px; 18px; "Oswald"; @text-color);
   text-transform: uppercase;
 
-  border: 1px solid @border-color;
+  border: 1px solid #e6e6e6;
+
+  &:hover {
+    border-color: #cdcdcd;
+  }
+
+  &:active {
+    border-color: @text-color;
+  }
+
+  &:focus {
+    border-color: @text-color;
+  }
+
+  &:invalid {
+    border-color: #ff8282;
+  }
 }
 
 .form__field--main-info {
@@ -76,15 +93,15 @@
   }
 }
 
-.form__name input {
+.form__label--name input {
   width: 229px;
 }
 
-.form__weight input {
+.form__label--weight input {
   width: 204px;
 }
 
-.form__age input {
+.form__label--age input {
   width: 172px;
 }
 
@@ -114,15 +131,15 @@
   display: none;
 }
 
-.form__weight-less:checked ~ .form__purpose-weight-less::after {
+.form__input--weight-less:checked ~ .form__label--weight-less::after {
   display: block;
 }
 
-.form__weight-gain:checked ~ .form__purpose-weight-gain::after {
+.form__input--weight-gain:checked ~ .form__label--weight-gain::after {
   display: block;
 }
 
-.form__help:checked ~ .form__purpose-help::after {
+.form__input--help:checked ~ .form__label--help::after {
   display: block;
 }
 
@@ -189,20 +206,56 @@
   padding-right: 35px;
 }
 
-.form__email input {
-  width: 219px;
-
-  border: 1px solid @border-color;
-
-  background: url("../img/icon-mail.svg") no-repeat 93% center;
-  background-size: 8%;
+.form__label--email {
+  position: relative;
 }
 
-.form__phone input {
-  width: 204px;
+.form__label--email input {
+  width: 219px;
+}
 
-  background: url("../img/icon-phone.svg") no-repeat 94% center;
-  background-size: 10%;
+.form__label--email input:active ~ .form__svg {
+  fill: @main-color;
+}
+
+.form__label--email input:focus ~ .form__svg {
+  fill: @main-color;
+}
+
+.form__label--email input:invalid ~ .form__svg {
+  fill: #ff8282;
+}
+
+.form__svg--email {
+  position: absolute;
+  top: 17px;
+  right: 16px;
+}
+
+.form__label--phone {
+  position: relative;
+}
+
+.form__label--phone input {
+  width: 204px;
+}
+
+.form__label--phone input:active ~ .form__svg {
+  fill: @main-color;
+}
+
+.form__label--phone input:focus ~ .form__svg {
+  fill: @main-color;
+}
+
+.form__label--phone input:invalid ~ .form__svg {
+  fill: #ff8282;
+}
+
+.form__svg--phone {
+  position: absolute;
+  top: 15px;
+  right: 13px;
 }
 
 .form__field--comment {
@@ -266,22 +319,22 @@
   }
 }
 
-.form__sweetener:checked ~ .form__extra-sweetener::after {
+.form__input--sweetener:checked ~ .form__label--extra-sweetener::after {
   background: url("../img/icon-tick.svg") no-repeat  center center;
   background-size: 80%;
 }
 
-.form__water:checked ~ .form__extra-water::after {
+.form__input--water:checked ~ .form__label--extra-water::after {
   background: url("../img/icon-tick.svg") no-repeat  center center;
   background-size: 80%;
 }
 
-.form__milk:checked ~ .form__extra-milk::after {
+.form__input--milk:checked ~ .form__label--extra-milk::after {
   background: url("../img/icon-tick.svg") no-repeat  center center;
   background-size: 80%;
 }
 
-.form__vitamins:checked ~ .form__extra-vitamins::after {
+.form__input--vitamins:checked ~ .form__label--extra-vitamins::after {
   background: url("../img/icon-tick.svg") no-repeat  center center;
   background-size: 80%;
 }
@@ -293,7 +346,7 @@
   border: none;
 }
 
-.primary-field {
+.form__primary-field {
   .zero;
   padding: 22px 55px 31px 63px;
 
@@ -359,15 +412,15 @@
     margin-bottom: 20px;
   }
 
-  .form__name input {
+  .form__label--name input {
     width: 567px;
   }
 
-  .form__weight input {
+  .form__label--weight input {
     width: 536px;
   }
 
-  .form__age input {
+  .form__label--age input {
     width: 497px;
   }
 
@@ -413,14 +466,14 @@
     margin-bottom: 20px;
   }
 
-  .form__email input {
+  .form__label--email input {
     width: 551px;
     padding-left: 23px;
 
     background-size: 4%;
   }
 
-  .form__phone input {
+  .form__label--phone input {
     width: 535px;
     padding-left: 20px;
 
@@ -473,22 +526,22 @@
     }
   }
 
-  .form__sweetener:checked ~ .form__extra-sweetener::after {
+  .form__input--sweetener:checked ~ .form__label--extra-sweetener::after {
     background: url("../img/icon-tick.svg") no-repeat center center;
     background-size: 60%;
   }
 
-  .form__water:checked ~ .form__extra-water::after {
+  .form__input--water:checked ~ .form__label--extra-water::after {
     background: url("../img/icon-tick.svg") no-repeat center center;
     background-size: 60%;
   }
 
-  .form__milk:checked ~ .form__extra-milk::after {
+  .form__input--milk:checked ~ .form__label--extra-milk::after {
     background: url("../img/icon-tick.svg") no-repeat center center;
     background-size: 60%;
   }
 
-  .form__vitamins:checked ~ .form__extra-vitamins::after {
+  .form__input--vitamins:checked ~ .form__label--extra-vitamins::after {
     background: url("../img/icon-tick.svg") no-repeat center center;
     background-size: 60%;
   }
@@ -506,7 +559,7 @@
     .setFont(20px; 20px; "Oswald"; #ffffff;);
   }
 
-  .primary-field {
+  .form__primary-field {
     .zero;
     padding-left: 62px;
     padding-top: 11px;
@@ -560,15 +613,15 @@
     margin-bottom: 68px;
   }
 
-  .form__name input {
+  .form__label--name input {
     width: 507px;
   }
 
-  .form__weight input {
+  .form__label--weight input {
     width: 475px;
   }
 
-  .form__age input {
+  .form__label--age input {
     width: 436px;
   }
 
@@ -581,13 +634,13 @@
     justify-content: space-between;
   }
 
-  .form__email input {
+  .form__label--email input {
     width: 488px;
     padding-left: 21px;
     margin-left: 20px;
   }
 
-  .form__phone input {
+  .form__label--phone input {
     width: 472px;
     padding-left: 18px;
     margin-left: 20px;
@@ -611,7 +664,7 @@
     padding-top: 15px;
   }
 
-  .primary-field {
+  .form__primary-field {
     padding-left: 81px;
   }
 }

@@ -43,16 +43,8 @@
   z-index: 1;
 }
 
-.address__map-img {
-  position: absolute;
-  top: -38px;
-  left: 0;
-}
-
-.address__mark-img {
-  position: absolute;
-  top: 140px;
-  left: 125px;
+.address__map iframe {
+  border: 0;
 }
 
 @media (min-width: 768px) {
@@ -83,18 +75,6 @@
     height: 396px;
   }
 
-  .address__map-img {
-    width: 768px;
-  }
-
-  .address__mark-img {
-    top: 110px;
-    left: 330px;
-
-    width: 124px;
-    height: 106px;
-  }
-
   .address__map iframe {
     width: 768px;
     height: 396px;
@@ -111,27 +91,26 @@
   .address__wrapper {
     position: absolute;
     top: 95px;
-    left: 110px;
+    left: 100px;
 
+    align-items: flex-start;
     width: 570px;
     height: 201px;
+    padding-left: 78px;
+    padding-right: 88px;
+    padding-top: 65px;
 
     background: #ffffff;
 
     z-index: 2;
   }
 
+  .address__wrapper p {
+    text-align: left;
+  }
+
   .address__map {
     width: 1440px;
-  }
-
-  .address__map-img {
-    width: 1440px;
-  }
-
-  .address__mark-img {
-    top: 110px;
-    left: 1000px;
   }
 
   .address__map iframe {
