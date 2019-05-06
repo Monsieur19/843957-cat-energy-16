@@ -8,7 +8,7 @@
 }
 
 .example__description {
-  margin-bottom: 35px;
+  margin-bottom: 33px;
 }
 
 .example__title {
@@ -21,11 +21,12 @@
 .example__story {
   .zero;
   padding-right: 10px;
-  margin-bottom: 25px;
+  margin-bottom: 27px;
 
   font-size: 14px;
   line-height: 18px;
   font-family: "Arial", sans-serif;
+  color: @text-color;
 }
 
 .example__info {
@@ -40,11 +41,12 @@
   position: relative;
 
   .zero;
-  width: 122px;
-  height: 54px;
+  width: 124px;
+  height: 56px;
+  padding-top: 14px;
 
   font-size: 24px;
-  line-height: 50px;
+  line-height: 24px;
   text-align: center;
   text-transform: uppercase;
 
@@ -56,15 +58,17 @@
 .example__amount-days span {
   position: absolute;
   left: 50%;
-  bottom: -7px;
+  bottom: -4px;
 
-  padding: 0 15px;
+  width: 87px;
+  padding: 0 10px;
 
   font-size: 12px;
   line-height: 12px;
   color: @text-color;
   font-family: "Arial", sans-serif;
   text-transform: lowercase;
+  text-align: center;
 
   background-color: @grey-color;
 
@@ -87,7 +91,7 @@
     position: relative;
 
     padding-top: 43px;
-    padding-bottom: 60px;
+    padding-bottom: 68px;
 
     background-image: linear-gradient(#ffffff 620px, @grey-color 620px);
   }
@@ -102,13 +106,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 54px;
+    margin-bottom: 51px;
   }
 
   .example__story {
     width: 680px;
     padding: 0;
-    margin-bottom: 50px;
+    margin-bottom: 53px;
 
     .setOnlyFont(16px; 24px;);
   }
@@ -121,31 +125,30 @@
   .example__amount-days {
     width: 162px;
     height: 72px;
+    padding-top: 17px;
 
-    .setOnlyFont(30px; 70px;);
+    .setOnlyFont(30px; 30px;);
     text-transform: uppercase;
   }
 
   .example__weight span {
-    bottom: -2px;
+    bottom: 0;
 
     width: 114px;
     padding: 0;
 
     .setOnlyFont(14px; 14px;);
-    text-transform: lowercase;
 
     background-color: #ffffff;
   }
 
   .example__amount-days span {
-    bottom: -2px;
+    bottom: 0;
 
     width: 142px;
     padding: 0;
 
     .setOnlyFont(14px; 14px;);
-    text-transform: lowercase;
 
     background-color: #ffffff;
   }
@@ -154,7 +157,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-end;
-    padding-top: 14px;
+    padding-top: 12px;
 
     .setOnlyFont(20px; 20px;);
 
@@ -167,7 +170,7 @@
 @media (min-width: 1300px) {
   .example {
     padding-top: 0;
-    padding-bottom: 20px;
+    padding-bottom: 23px;
 
     background-image: linear-gradient(#ffffff 207px, @grey-color 200px);
   }
@@ -195,6 +198,10 @@
 
   .example__info {
     margin-bottom: 62px;
+  }
+
+  .example__info p {
+    padding-top: 19px;
   }
 
   .example__info span {
