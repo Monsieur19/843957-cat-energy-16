@@ -2,7 +2,7 @@
   padding-top: 17px;
   padding-bottom: 35px;
 
-  background: @grey-color;
+  background-color: @grey-color;
 
   overflow: hidden;
 }
@@ -66,7 +66,7 @@
   font-family: "Arial", sans-serif;
   text-transform: lowercase;
 
-  background: @grey-color;
+  background-color: @grey-color;
 
   transform: translate(-50%, 50%);
 }
@@ -89,13 +89,13 @@
     padding-top: 43px;
     padding-bottom: 60px;
 
-    background: linear-gradient(#ffffff 620px, @grey-color 620px);
+    background-image: linear-gradient(#ffffff 620px, @grey-color 620px);
   }
 
   .example__title {
     margin-bottom: 64px;
 
-    .setFont(size; 60px; 60px;);
+    .setOnlyFont(60px; 60px;);
   }
 
   .example__description {
@@ -110,7 +110,7 @@
     padding: 0;
     margin-bottom: 50px;
 
-    .setFont(size; 16px; 24px;);
+    .setOnlyFont(16px; 24px;);
   }
 
   .example__info {
@@ -122,7 +122,7 @@
     width: 162px;
     height: 72px;
 
-    .setFont(size; 30px; 70px;);
+    .setOnlyFont(30px; 70px;);
     text-transform: uppercase;
   }
 
@@ -132,10 +132,10 @@
     width: 114px;
     padding: 0;
 
-    .setFont(size; 14px; 14px;);
+    .setOnlyFont(14px; 14px;);
     text-transform: lowercase;
 
-    background: #ffffff;
+    background-color: #ffffff;
   }
 
   .example__amount-days span {
@@ -144,10 +144,10 @@
     width: 142px;
     padding: 0;
 
-    .setFont(size; 14px; 14px;);
+    .setOnlyFont(14px; 14px;);
     text-transform: lowercase;
 
-    background: #ffffff;
+    background-color: #ffffff;
   }
 
   .example__price {
@@ -156,7 +156,7 @@
     align-items: flex-end;
     padding-top: 14px;
 
-    .setFont(size; 20px; 20px;);
+    .setOnlyFont(20px; 20px;);
 
     & span:first-child {
       margin-bottom: 10px;
@@ -169,7 +169,7 @@
     padding-top: 0;
     padding-bottom: 20px;
 
-    background: linear-gradient(#ffffff 207px, @grey-color 200px);
+    background-image: linear-gradient(#ffffff 207px, @grey-color 200px);
   }
 
   .example__wrapper {
@@ -198,7 +198,7 @@
   }
 
   .example__info span {
-    background: @grey-color;
+    background-color: @grey-color;
   }
 
   .example__price {
@@ -206,9 +206,9 @@
     justify-content: space-between;
     width: 327px;
     padding: 0;
+  }
 
-    & span:first-child {
-      margin: 0;
-    }
+  .example__price span:first-child {
+    margin: 0;
   }
 }

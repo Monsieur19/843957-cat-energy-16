@@ -1,8 +1,9 @@
 .programm {
   margin-bottom: 22px;
 
-  background: url("../img/index-can-mobile@1x.png") no-repeat,
-    url("../img/index-background-mobile@1x.jpg") no-repeat;
+  background-image: url("../img/index-can-mobile@1x.png"),
+    url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat, no-repeat;
   background-position: center 80%, center 0%;
   background-size: 280px 271px, 320px 305px;
 }
@@ -50,7 +51,8 @@
     padding-top: 40px;
     padding-bottom: 530px;
 
-    background: url("../img/index-can-tablet@1x.jpg") no-repeat;
+    background-image: url("../img/index-can-tablet@1x.jpg");
+    background-repeat: no-repeat;
     background-position: center 100%;
     background-size: 100%;
   }
@@ -96,7 +98,9 @@
       left: 50%;
       width: 50%;
       height: 696px;
-      background: #65a93c url("../img/index-background-desktop@1x.jpg") no-repeat;
+      background-image: url("../img/index-background-desktop@1x.jpg");
+      background-color: #65a93c;
+      background-repeat: no-repeat;
       background-size: cover;
       background-position: left 0%;
       z-index: -1;
@@ -109,7 +113,7 @@
       left: 50%;
       width: 50%;
       height: 696px;
-      background: #65a93c;
+      background-color: #65a93c;
       z-index: -1;
     }
   }
