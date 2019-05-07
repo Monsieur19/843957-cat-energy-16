@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Cat Energy</title>
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
@@ -52,9 +54,9 @@
                 <label class="form__label form__label--age">Возраст (лет):<input class="form__input" type="text" name="user-age" value="7"></label>
             </fieldset>
             <fieldset class="form__field form__field--purpose">
-                <input class="form__input form__input--weight-less" id="weight-less" type="radio" name="purpose" checked>
-                <input class="form__input form__input--weight-gain" id="weight-gain" type="radio" name="purpose">
-                <input class="form__input form__input--help" id="help" type="radio" name="purpose">
+                <input class="form__input form__input--weight-less visually-hidden" id="weight-less" type="radio" name="purpose" checked>
+                <input class="form__input form__input--weight-gain visually-hidden" id="weight-gain" type="radio" name="purpose">
+                <input class="form__input form__input--help visually-hidden" id="help" type="radio" name="purpose">
                 <label class="form__label form__label--weight-less" for="weight-less">Похудение</label>
                 <label class="form__label form__label--weight-gain" for="weight-gain">Набор массы</label>
                 <label class="form__label form__label--help" for="help">Не знаю (нужен ваш совет)</label>
@@ -79,10 +81,10 @@
             <fieldset class="form__field form__field--extra">
               <legend class="form__legend">Дополнительно</legend>
               <div class="form__extra-container">
-                <input class="form__input form__input--sweetener" type="checkbox" id="sweetener" checked>
-                <input class="form__input form__input--water" type="checkbox" id="water">
-                <input class="form__input form__input--milk" type="checkbox" id="milk">
-                <input class="form__input form__input--vitamins" type="checkbox" id="vitamins">
+                <input class="form__input form__input--sweetener visually-hidden" type="checkbox" id="sweetener" checked>
+                <input class="form__input form__input--water visually-hidden" type="checkbox" id="water">
+                <input class="form__input form__input--milk visually-hidden" type="checkbox" id="milk">
+                <input class="form__input form__input--vitamins visually-hidden" type="checkbox" id="vitamins">
                 <label class="form__label form__label--extra-sweetener" for="sweetener">Сахарозаменитель</label>
                 <label class="form__label form__label--extra-water" for="water">Питьевая вода</label>
                 <label class="form__label form__label--extra-milk" for="milk">Молоко</label>

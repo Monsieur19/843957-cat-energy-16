@@ -107,10 +107,6 @@
   }
 }
 
-.form__field--purpose input {
-  display: none;
-}
-
 .form__input--weight-less:checked ~ .form__label--weight-less::after {
   display: block;
 }
@@ -121,6 +117,18 @@
 
 .form__input--help:checked ~ .form__label--help::after {
   display: block;
+}
+
+.form__input--weight-less:focus ~ .form__label--weight-less::before {
+  border-color: #bcbcbc;
+}
+
+.form__input--weight-gain:focus ~ .form__label--weight-gain::before {
+  border-color: #bcbcbc;
+}
+
+.form__input--help:focus ~ .form__label--help::after {
+  border-color: #bcbcbc;
 }
 
 .form__field--purpose label {
@@ -262,10 +270,6 @@
   flex-direction: column;
 }
 
-.form__extra-container input {
-  display: none;
-}
-
 .form__field--extra {
   margin-bottom: 15px;
 }
@@ -327,6 +331,22 @@
   background-size: 80%;
 }
 
+.form__input--sweetener:focus ~ .form__label--extra-sweetener::after {
+  border-color: #bababa;
+}
+
+.form__input--water:focus ~ .form__label--extra-water::after {
+  border-color: #bababa;
+}
+
+.form__input--milk:focus ~ .form__label--extra-milk::after {
+  border-color: #bababa;
+}
+
+.form__input--vitamins:focus ~ .form__label--extra-vitamins::after {
+  border-color: #bababa;
+}
+
 .form__btn-send-request {
   padding: 9px 0 10px 0;
   .setFont(16px; 20px; "Oswald"; #ffffff;);
@@ -338,7 +358,9 @@
   .zero;
   padding: 22px 55px 31px 63px;
 
-  .setFont(14px; 16px; "Arial"; @text-color;);
+  .setOnlyFont(14px; 16px;);
+  color: @text-color;
+  font-family: "Arial", "Tahoma", sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -543,7 +565,9 @@
     padding-top: 11px;
     padding-bottom: 15px;
 
-    .setFont(16px; 16px; "Arial"; @text-color;);
+    .setOnlyFont(16px; 16px;);
+    color: @text-color;
+    font-family: "Arial", "Tahoma", sans-serif;
   }
 }
 
